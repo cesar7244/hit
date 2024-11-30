@@ -41,14 +41,8 @@ fn main() {
 
     println!("\n--- Análisis de caracteres ---");
     println!("Caracteres comunes: {:?}", comunes);
-    println!(
-        "Caracteres únicos en la primera cadena: {:?}",
-        unicos1
-    );
-    println!(
-        "Caracteres únicos en la segunda cadena: {:?}",
-        unicos2
-    );
+    println!("Caracteres únicos en la primera cadena: {:?}", unicos1);
+    println!("Caracteres únicos en la segunda cadena: {:?}", unicos2);
     println!("Total de caracteres comunes: {}", comunes.len());
 
     // Comparación lexicográfica
