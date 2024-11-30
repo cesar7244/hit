@@ -1,0 +1,32 @@
+name: Rust CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Configura el repositorio en la máquina virtual
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Instala Rust
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+
+    # Construye el proyecto
+    - name: Build project
+      run: cargo build --verbose
+
+    # Ejecuta las pruebas (si tienes)
+    - name: Run tests
+      run: cargo test --verbose
